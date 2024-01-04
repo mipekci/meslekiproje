@@ -69,7 +69,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+        <a href="<?php echo base_url('')?>" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
             <h2 class="m-0"><i class="fa fa-car text-primary me-2"></i>İpekçi Sürücü Kursu</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -77,7 +77,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="<?php echo base_url("main")?>" class="nav-item nav-link active">Ana Sayfa</a>
+                <a href="<?php echo base_url('')?>" class="nav-item nav-link active">Ana Sayfa</a>
                 <a href="#" class="nav-item nav-link">Kurumsal</a>
                 <a href="#" class="nav-item nav-link">Kurslar</a>
                 <div class="nav-item dropdown">
@@ -91,7 +91,7 @@
                 </div>
                 <a href="<?php echo base_url('main/contact')?>" class="nav-item nav-link">İletişim</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Randevu Al<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="<?php echo base_url('admin/login')?>" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Admin girişi<i class="fa fa-arrow-right ms-3"></i></a>   
         </div>
     </nav>
     <!-- Navbar End -->

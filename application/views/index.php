@@ -91,7 +91,11 @@
                 </div>
                 <a href="<?php echo base_url("main/contact")?>" class="nav-item nav-link">İletişim</a>
             </div>
-            <a href="<?php echo base_url('admin/login')?>" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Admin girişi<i class="fa fa-arrow-right ms-3"></i></a>
+            <?php if (!$signed_in) {?>
+                <a href="<?php echo base_url('admin/login')?>" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Admin girişi<i class="fa fa-arrow-right ms-3"></i></a>
+            <?php } else {?>
+                <a href="<?php echo base_url('/panel')?>" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Yönetici paneli<i class="fa fa-arrow-right ms-3"></i></a>
+            <?php }?>
         </div>
     </nav>
     <!-- Navbar End -->

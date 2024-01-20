@@ -6,11 +6,16 @@ class Main extends CI_Controller {
 		parent::__construct();
 		$this->load->model("Contact");
 		$this->load->helper('url');
+		$this->load->library("session");
 	}
 
 	public function index()
 	{
-		$this->load->view("index");	
+		$signed_in = false;
+		if ($this->session->userdata("logged_in") != "") {
+			$signed_in = true;
+		}
+		$this->load->view("index",array("signed_in" => $signed_in));
 	}
 
 	public function contact() {
